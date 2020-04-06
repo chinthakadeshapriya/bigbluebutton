@@ -54,6 +54,8 @@ COPY --from=builder /source/target/bigbluebutton-0.9.0.war webapps/bigbluebutton
 
 RUN unzip -q webapps/bigbluebutton.war -d webapps/bigbluebutton \
  && rm webapps/bigbluebutton.war
+ 
+EXPOSE 8090
 
 COPY turn-stun-servers.xml.tmpl turn-stun-servers.xml.tmpl
 
